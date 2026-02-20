@@ -11,13 +11,14 @@ The C standard library is intentionally minimal. `wim` fills the gap with two co
 ### `wim/ds` — Data Structures
 Dynamic arrays, linked lists, hash maps, trees, queues, and more. Generic via void pointers and macros.
 
-| Structure              | Status       | Notes |
-|------------------------|--------------|-------|
-| Dynamic Array          | Completed    |       |
-| Single Linked List     | Completed    |       |
-| Double Linked List     | Completed    |       |
-| Circular Linked List   | Planned      |       |
-| Queue                  | Planned      |       |
+| Structure                     | Status       | Notes |
+|-------------------------------|--------------|-------|
+| Dynamic Array                 | Completed    |       |
+| Single Linked List            | Completed    |       |
+| Double Linked List            | Completed    |       |
+| Circular Single Linked List   | Completed    |       |
+| Circular Double Linked List   | Completed    |       |
+| Queue                         | Planned      |       |
 
 ### `wim/alloc` — Allocators
 Arena, pool, buddy, slab, free list, and other allocator strategies as drop-in building blocks.

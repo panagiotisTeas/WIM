@@ -2,6 +2,10 @@
 
 #include <memory.h>
 
+// ---------------------
+// --- Dynamic Array ---
+// ---------------------
+
 DynamicArray    
 daCreate(u64 data_size, u64 buffer_init_capacity)
 {

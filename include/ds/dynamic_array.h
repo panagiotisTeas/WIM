@@ -3,6 +3,7 @@
 
 #include "common.h"
 
+// Dynamic Array
 typedef struct DynamicArray
 {
     void*   data_buffer;
@@ -10,6 +11,8 @@ typedef struct DynamicArray
     u64     buffer_size;
     u64     buffer_capacity;
 } DynamicArray;
+
+// Dynamic Array API
 
 DynamicArray    daCreate(u64 data_size, u64 buffer_init_capacity);
 void            daDestroy(DynamicArray* da);

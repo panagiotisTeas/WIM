@@ -69,18 +69,18 @@ u64 sllGetNodeCount(SLinkedList* sll);
 // Double Linked List API
 
 DLinkedList dllCreate(void);
-void        dllDelete(DLinkedList* sll);
+void        dllDelete(DLinkedList* dll);
 
-void    dllInsertHead(DLinkedList* sll, void* data, u64 data_size);
-b8      dllDeleteHead(DLinkedList* sll);
+void    dllInsertHead(DLinkedList* dll, void* data, u64 data_size);
+b8      dllDeleteHead(DLinkedList* dll);
 
-void    dllInsertTail(DLinkedList* sll, void* data, u64 data_size);
-b8      dllDeleteTail(DLinkedList* sll);
+void    dllInsertTail(DLinkedList* dll, void* data, u64 data_size);
+b8      dllDeleteTail(DLinkedList* dll);
 
-void    dllInsertAt(DLinkedList* sll, void* data, u64 data_size, u64 index);
-b8      dllDeleteAt(DLinkedList* sll, u64 index);
+void    dllInsertAt(DLinkedList* dll, void* data, u64 data_size, u64 index);
+b8      dllDeleteAt(DLinkedList* dll, u64 index);
 
-u64 dllGetNodeCount(DLinkedList* sll);
+u64 dllGetNodeCount(DLinkedList* dll);
 
 #define forEachDLLNodeForward(dll, node) \
     for ((node) = (dll)->head; (node) != NULL; (node) = (node)->next)
@@ -91,42 +91,42 @@ u64 dllGetNodeCount(DLinkedList* sll);
 // Circular Single Linked List API
 
 CSLinkedList    csllCreate(void);
-void            csllDelete(CSLinkedList* sll);
+void            csllDelete(CSLinkedList* csll);
 
-void    csllInsertHead(CSLinkedList* sll, void* data, u64 data_size);
-b8      csllDeleteHead(CSLinkedList* sll);
+void    csllInsertHead(CSLinkedList* csll, void* data, u64 data_size);
+b8      csllDeleteHead(CSLinkedList* csll);
 
-void    csllInsertTail(CSLinkedList* sll, void* data, u64 data_size);
-b8      csllDeleteTail(CSLinkedList* sll);
+void    csllInsertTail(CSLinkedList* csll, void* data, u64 data_size);
+b8      csllDeleteTail(CSLinkedList* csll);
 
-void    csllInsertAt(CSLinkedList* sll, void* data, u64 data_size, u64 index);
-b8      csllDeleteAt(CSLinkedList* sll, u64 index);
+void    csllInsertAt(CSLinkedList* csll, void* data, u64 data_size, u64 index);
+b8      csllDeleteAt(CSLinkedList* csll, u64 index);
 
-u64 csllGetNodeCount(CSLinkedList* sll);
+u64 csllGetNodeCount(CSLinkedList* csll);
 
-#define forEachCSLLNode(csll, node, index) \
+#define forEachCSLLNode(csll, node, i) \
     for ((node) = (csll)->head, (i) = 0; (i) < (csll)->node_count; (node) = (node)->next, (i)++)
 
 // Circular Double Linked List API
 
 CDLinkedList    cdllCreate(void);
-void            cdllDelete(CDLinkedList* sll);
+void            cdllDelete(CDLinkedList* cdll);
 
-void    cdllInsertHead(CDLinkedList* sll, void* data, u64 data_size);
-b8      cdllDeleteHead(CDLinkedList* sll);
+void    cdllInsertHead(CDLinkedList* cdll, void* data, u64 data_size);
+b8      cdllDeleteHead(CDLinkedList* cdll);
 
-void    cdllInsertTail(CDLinkedList* sll, void* data, u64 data_size);
-b8      cdllDeleteTail(CDLinkedList* sll);
+void    cdllInsertTail(CDLinkedList* cdll, void* data, u64 data_size);
+b8      cdllDeleteTail(CDLinkedList* cdll);
 
-void    cdllInsertAt(CDLinkedList* sll, void* data, u64 data_size, u64 index);
-b8      cdllDeleteAt(CDLinkedList* sll, u64 index);
+void    cdllInsertAt(CDLinkedList* cdll, void* data, u64 data_size, u64 index);
+b8      cdllDeleteAt(CDLinkedList* cdll, u64 index);
 
-u64 cdllGetNodeCount(CDLinkedList* sll);
+u64 cdllGetNodeCount(CDLinkedList* cdll);
 
-#define forEachCDLLNodeForward(cdll, node) \
+#define forEachCDLLNodeForward(cdll, node, i) \
     for ((node) = (cdll)->head, (i) = 0; (i) < (cdll)->node_count; (node) = (node)->next, (i)++)
 
-#define forEachCDLLNodeBackward(cdll, node) \
+#define forEachCDLLNodeBackward(cdll, node, i) \
     for ((node) = (cdll)->tail, (i) = 0; (i) < (cdll)->node_count; (node) = (node)->prev, (i)++)
-    
+
 #endif // WIM_LINKED_LIST_H
