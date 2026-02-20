@@ -18,19 +18,19 @@ int main(void)
 
     // Append some values
     int a = 10, b = 20, c = 30;
-    sllAppend(&sll, &a, sizeof(int));
-    sllAppend(&sll, &b, sizeof(int));
-    sllAppend(&sll, &c, sizeof(int));
+    sllInsertTail(&sll, &a, sizeof(int));
+    sllInsertTail(&sll, &b, sizeof(int));
+    sllInsertTail(&sll, &c, sizeof(int));
     printList(&sll); // 10 -> 20 -> 30 -> NULL
 
     // Prepend a value
     int d = 5;
-    sllPrepend(&sll, &d, sizeof(int));
+    sllInsertHead(&sll, &d, sizeof(int));
     printList(&sll); // 5 -> 10 -> 20 -> 30 -> NULL
 
     // Insert in the middle at index 2
     int e = 15;
-    sllInsert(&sll, &e, sizeof(int), 2);
+    sllInsertAt(&sll, &e, sizeof(int), 2);
     printList(&sll); // 5 -> 10 -> 15 -> 20 -> 30 -> NULL
 
     // Delete head

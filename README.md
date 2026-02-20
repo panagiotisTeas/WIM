@@ -14,8 +14,8 @@ Dynamic arrays, linked lists, hash maps, trees, queues, and more. Generic via vo
 | Structure              | Status       | Notes |
 |------------------------|--------------|-------|
 | Dynamic Array          | Completed    |       |
-| Single Linked List     | Planned      |       |
-| Double Linked List     | Planned      |       |
+| Single Linked List     | Completed    |       |
+| Double Linked List     | Completed    |       |
 | Circular Linked List   | Planned      |       |
 | Queue                  | Planned      |       |
 

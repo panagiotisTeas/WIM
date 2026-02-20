@@ -72,6 +72,11 @@ target_include_directories(s_linked_list_ex PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/
 target_link_libraries(s_linked_list_ex PRIVATE wimlib)
 target_compile_options(s_linked_list_ex PRIVATE -Wall -Wextra -pedantic)
 
+add_executable(d_linked_list_ex examples/d_linked_list_ex.c)
+target_include_directories(d_linked_list_ex PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(d_linked_list_ex PRIVATE wimlib)
+target_compile_options(d_linked_list_ex PRIVATE -Wall -Wextra -pedantic)
+
 # Summary
 message(STATUS "")
 message(STATUS "=======================================================")
