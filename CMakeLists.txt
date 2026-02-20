@@ -55,6 +55,7 @@ add_library(wimlib
 src/memory_hooks.c
 # ds
 src/ds/dynamic_array.c
+src/ds/linked_list.c
 # alloc
 )
 target_include_directories(wimlib PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
@@ -65,6 +66,11 @@ add_executable(dyn_arr_ex examples/dyn_arr_ex.c)
 target_include_directories(dyn_arr_ex PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(dyn_arr_ex PRIVATE wimlib)
 target_compile_options(dyn_arr_ex PRIVATE -Wall -Wextra -pedantic)
+
+add_executable(s_linked_list_ex examples/s_linked_list_ex.c)
+target_include_directories(s_linked_list_ex PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(s_linked_list_ex PRIVATE wimlib)
+target_compile_options(s_linked_list_ex PRIVATE -Wall -Wextra -pedantic)
 
 # Summary
 message(STATUS "")
