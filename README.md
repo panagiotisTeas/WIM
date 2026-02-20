@@ -18,6 +18,7 @@ Dynamic arrays, linked lists, hash maps, trees, queues, and more. Generic via vo
 | Double Linked List            | Completed    |       |
 | Circular Single Linked List   | Completed    |       |
 | Circular Double Linked List   | Completed    |       |
+| Stack                         | Completed    |       |
 | Queue                         | Planned      |       |
 
 ### `wim/alloc` — Allocators
