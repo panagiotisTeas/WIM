@@ -55,6 +55,7 @@ add_library(wimlib
 src/memory_hooks.c
 # ds
 src/ds/dynamic_array.c
+src/ds/heap.c
 src/ds/linked_list.c
 src/ds/queue.c
 src/ds/stack.c
@@ -98,6 +99,11 @@ add_executable(queue_ex examples/queue_ex.c)
 target_include_directories(queue_ex PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(queue_ex PRIVATE wimlib)
 target_compile_options(queue_ex PRIVATE -Wall -Wextra -pedantic)
+
+add_executable(heap_ex examples/heap_ex.c)
+target_include_directories(heap_ex PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_link_libraries(heap_ex PRIVATE wimlib)
+target_compile_options(heap_ex PRIVATE -Wall -Wextra -pedantic)
 
 # Summary
 message(STATUS "")
