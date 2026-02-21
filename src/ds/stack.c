@@ -49,8 +49,8 @@ stackPop(Stack* s, void* out)
         out, 
         data, 
         s->da.data_size
-    )
-    ;
+    );
+    
     daPopBack(&s->da);
 }
 

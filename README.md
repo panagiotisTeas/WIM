@@ -19,7 +19,8 @@ Dynamic arrays, linked lists, hash maps, trees, queues, and more. Generic via vo
 | Circular Single Linked List   | Completed    |       |
 | Circular Double Linked List   | Completed    |       |
 | Stack                         | Completed    |       |
-| Queue                         | Planned      |       |
+| Queue                         | Completed    |       |
+| Circular Queue                | Planned      |       |
 
 ### `wim/alloc` — Allocators
 Arena, pool, buddy, slab, free list, and other allocator strategies as drop-in building blocks.
